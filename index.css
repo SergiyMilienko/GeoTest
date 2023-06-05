@@ -1,0 +1,19 @@
+body {
+    background-image: url("https://images.pexels.com/photos/414916/pexels-photo-414916.jpeg?cs=srgb&dl=pexels-pixabay-414916.jpg&fm=jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond !important;
+    font-size: 150px !important;
+}
