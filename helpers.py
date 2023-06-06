@@ -1,4 +1,4 @@
-from flask import redirect, session
+from flask import redirect, session, render_template
 from functools import wraps
 
 def login_required(f):
@@ -13,3 +13,7 @@ def login_required(f):
             return redirect("/login")
         return f(*args, **kwargs)
     return decorated_function
+
+def apology(message, code, field_name=None):
+    """Function to display error message and highlight box in red"""
+    return render_template("register.html", apology_message=message, error_field=field_name)
