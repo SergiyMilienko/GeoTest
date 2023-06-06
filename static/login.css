@@ -34,21 +34,11 @@ h1 {
     }
 }
 
-/* Coloring "Geo" */
-.highlight-white { 
-    color: rgb(255, 255, 255);
-}
-
-/* Coloring "Fact" */
-.highlight-yellow { 
-    color: gold;
-}
-
-/* "Play" button */
+/* "Register" button */
 .start {
     background-color: rgba(255, 255, 255, 0.9);
     color: rgb(0, 0, 0);
-    font-size: 60px;
+    font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 12px 24px;
     border: none;
@@ -79,3 +69,55 @@ h1 {
 .start:active {
     transform: translateY(1px);
 }
+
+/* Input box style */
+.input {
+    background-color: rgb(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border-color: gold;
+}
+
+/* Input box style when it is hovered */
+.input:hover {
+    background-color: rgb(255, 255, 255);
+    /* Scale when hovered */
+    transform: scale(1.05);
+}
+
+.register-now {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 7px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.hyperlink {
+    color: rgb(231, 113, 29);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hyperlink:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+.forgot-passcode {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+}
+

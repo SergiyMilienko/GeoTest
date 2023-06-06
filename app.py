@@ -21,16 +21,16 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        return render_template("index.html")
-    else: 
-        return render_template("index.html")
-    
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
-    if request.method == "POST":
         return render_template("index.html")
-    else: 
-        return render_template("index.html")
+
+@app.route("/login")
+def login():
+        return render_template("login.html")
+
+@app.route("/register")
+def register():
+        return render_template("login.html")
+    
+
