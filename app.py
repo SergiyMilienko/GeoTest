@@ -43,9 +43,46 @@ def after_request(response):
 def index():
         return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-        return render_template("login.html")
+    """Log user in"""
+    # Connect to database 
+    with sqlite3.connect('geofact.db') as db:
+        # User reached route via POST (as by submitting a form via POST)
+        if request.method == "POST":
+
+            # Ensure username was submitted
+            if not request.form.get("username"):
+                apology_message = "Enter your username"
+                error_field = "username"
+
+                return render_template("login.html", apology_message=apology_message, error_field=error_field)
+
+            # Ensure password was submitted
+            elif not request.form.get("password"):
+                apology_message = "Enter your password"
+                error_field = "password"
+
+                return render_template("login.html", apology_message=apology_message, error_field=error_field)
+            
+            # Check if entered password is correct 
+            rows = db.execute("SELECT * FROM users WHERE username = ?", (request.form.get("username"),))
+            row = rows.fetchone()
+            if not row or not check_password_hash(row[2], request.form.get("password")):
+                apology_message = "Invalid username and/or password"
+                error_field = "password" and "username"
+                return render_template("register.html", apology_message=apology_message, error_field=error_field)
+            
+            # Log user in
+            session["user_id"] = row[0]
+            session["username"] = row[1]
+
+            # Redirect to main page
+            return redirect("/")
+
+        # User reached route via GET (as by clicking a link or via redirect)
+        else:
+            return render_template("login.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -107,5 +144,8 @@ def register():
         else:
             return render_template("register.html")
 
+@app.route("/main")
+def main():
+        return render_template("main.html")
     
 
