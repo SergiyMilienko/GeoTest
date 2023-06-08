@@ -6,9 +6,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from helpers import login_required, apology
 import sqlite3
 
-# Configure application
-app = Flask(__name__)
-
 # Create database or create it if it does not exist
 conn = sqlite3.connect('geofact.db')
 
@@ -22,9 +19,8 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                     hash TEXT NOT NULL
                 )''')
 
-# Commit the changes and close the connection
-conn.commit()
-conn.close()
+# Configure application
+app = Flask(__name__)
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
@@ -69,9 +65,9 @@ def login():
             rows = db.execute("SELECT * FROM users WHERE username = ?", (request.form.get("username"),))
             row = rows.fetchone()
             if not row or not check_password_hash(row[2], request.form.get("password")):
-                apology_message = "Invalid username and/or password"
+                apology_message = "Invalid username/password"
                 error_field = "password" and "username"
-                return render_template("register.html", apology_message=apology_message, error_field=error_field)
+                return render_template("login.html", apology_message=apology_message, error_field=error_field)
             
             # Log user in
             session["user_id"] = row[0]
@@ -147,5 +143,18 @@ def register():
 @app.route("/main")
 def main():
         return render_template("main.html")
+
+@app.route("/resetpassword")
+def reset_password():
+        return render_template("main.html")
+
+@app.route("/logout")
+def logout():
+    """Log user out"""
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to login form
+    return redirect("/")
     
 

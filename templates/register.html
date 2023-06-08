@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2784/2784487.png">    
 </head>
 <body>
+    <button id="backButton" onclick="goBack()"></button>
     <!--Forms to fill username and password-->
     <form action="/register" method="post">
         <div class="mb-3">
@@ -37,6 +38,10 @@
         if (errorField) {
             var inputField = document.getElementById(errorField);
             inputField.classList.add("error-input");
+        }
+
+        function goBack() {
+            window.history.back();
         }
     </script>
 
