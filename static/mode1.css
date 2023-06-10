@@ -16,14 +16,16 @@ body {
     flex-direction: column;
 }
 
+
 /* Define how the header of main page look like */
 h1 {
-    margin: 70px 0 0;
-    margin-left: 20px;
     padding: 0;
-    font-size: 150px;
+    font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 /* Adjust header appearance when using phones or tablets */
@@ -221,3 +223,28 @@ form {
     margin-bottom: 5px;
     cursor: pointer;
 }
+
+.container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Quiz {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #ffea00; /* Grey text */
+ /* Full width */
+  padding: 20px; /* Some padding */
+  border-radius: 8px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;}
+
+  .highlight_red {
+    text-decoration: underline;
+  }
