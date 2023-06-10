@@ -146,7 +146,11 @@ def main():
 
 @app.route("/resetpassword")
 def reset_password():
-        return render_template("main.html")
+        return render_template("reset.html")
+
+@app.route("/settings")
+def settings():
+        return render_template("reset.html")
 
 @app.route("/logout")
 def logout():
@@ -157,4 +161,7 @@ def logout():
     # Redirect user to login form
     return redirect("/")
     
+@app.route("/play")
+def play():
+        return render_template("mode1.html")
 

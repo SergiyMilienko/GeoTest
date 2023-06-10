@@ -6,32 +6,31 @@
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>GeoFact</title>
     <!--CSS stylesheet-->
-    <link rel="stylesheet" href="static\login.css">
+    <link rel="stylesheet" href="static\register.css">
     <!--Add favicon-->
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2784/2784487.png">    
 </head>
 <body>
     <button id="backButton" onclick="goBack()"></button>
     <!--Forms to fill username and password-->
-    <form action="/login" method="post">
+    <form action="/register" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto input" id="username" name="username" placeholder="Username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto input" id="Current" name="Current" placeholder="Current Password" type="password">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto input" id="password" name="password" placeholder="Password" type="password">
+            <input class="form-control mx-auto w-auto input" id="password" name="password" placeholder="New Password" type="password">
         </div>
-            <button class="start" type="submit">Login</button>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto input" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="start" type="submit">Reset Password</button>
     </form>
-    
-    <!--Display error message-->
+
     {% if apology_message %}
     <div class="error-message">
         {{ apology_message }}
     </div>
     {% endif %}
-
-    <!--Register and forgot password-->
-    <p class="register-now">Don't have an account? <a href="/register" class="hyperlink">Register now</a></p>
 
     <script>
         // Check if there is an error field and apply CSS class to highlight it
@@ -40,7 +39,7 @@
             var inputField = document.getElementById(errorField);
             inputField.classList.add("error-input");
         }
-        
+
         function goBack() {
             window.history.back();
         }

@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>GeoFact</title>
     <!--CSS stylesheet-->
-    <link rel="stylesheet" href="static\index.css">
+    <link rel="stylesheet" href="static\main.css">
     <!--Add favicon-->
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2784/2784487.png">    
 </head>
 <body>
-    <!--Apply to different styles to parts of header-->
-    <h1><span class="highlight-white">Geo</span><span class="highlight-yellow">Fact</span></h1>
-    <!--Play button-->
-    <form action="/login">
+    <!-- Navbar -->
+    <nav class="topnav">
+        <a href="/main"><span class="highlight-white">Geo</span><span class="highlight-yellow">Fact</span></a>
+        <div class="topnav-centered">
+            {% if session.user_id %}
+                <a href="/user">{{ session.username }}</a>
+            {% endif %}
+        </div>
+        <div class="topnav-right">
+            <a href="/settings">Settings</a>
+        </div>
+    </nav>
+
+    <form action="/play" method="post">
+        <label for="cars">Choose a Mode:</label>
+        <select name="mode" id="mode">
+            <option value="mode1">Find Countries on the Map</option>
+            <option value="mode2">Guess the Country by Map</option>
+            <option value="mode3">Guess the Country by Fact</option>
+          </select>
+          <label for="cars">Choose a Difficulty:</label>
+          <select name="difficulty" id="difficulty">
+            <option value="ease">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
         <button class="start" type="submit">Play</button>
     </form>
 </body>

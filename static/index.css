@@ -12,9 +12,7 @@ body {
     /* Enable the use of flexbox properties*/
     display: flex;
     /* Aligning elements horizontally*/
-    justify-content: center;
     /* Aligning elements vertically*/
-    align-items: center;
     flex-direction: column;
 }
 
@@ -96,108 +94,49 @@ h2 {
     transform: translateY(1px);
 }
 
-/* Styles for the navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+/* Add a black background color to the top navigation */
+.topnav {
+    position: relative;
     background-color: rgb(29, 28, 28);
-    height: 70px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
+    overflow: hidden;
   }
   
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links-right {
-    margin-left: auto;
-}
-
-  .nav-links li {
-    margin-right: 20px;
-    margin-top: -30px;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 0px 8px;
-    border: none;
-    border-radius: 8px;
-    /* "Changing cursor to a pointer when hovered */
-    cursor: pointer;
-    /* Animation (changing color with scaling and then easing */
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
-  }
-  
-  .nav-links a {
-    color: #ffffff;
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-
-  .nav-links a:hover {
-    color: gold;
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
   }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Centered section inside the top navigation */
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+  }
+  
 
-  /* Adjust navbar for smaller screens */
-@media screen and (max-width: 768px) {
-    .navbar {
-        height: 45px;
-      }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 40px;
-        left: 220px;
-        width: 100%;
-        flex-direction: row;
-        align-items: flex-end;
-        background-color: rgb(29, 28, 28);
-        height: auto;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out;
-    }
-    
-    .nav-links li {
-        font-size: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .start {
-        font-size: 40px;
-        padding: 8px 16px;
-        margin-top: 10px; 
-    }
-}
-
-/* Adjust navbar for even smaller screens */
-@media screen and (max-width: 480px) {
-    .container {
-        padding: 0 5px;
-    }
-
-    .nav-links li {
-        margin: 5px 0;
-    }
-
-    .start {
-        font-size: 30px;
-        padding: 6px 12px;
-        margin-top: 35px; 
-    }
-}
+  
