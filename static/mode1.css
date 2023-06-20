@@ -268,3 +268,6 @@ form {
     justify-content: center;
     text-align: center;}
     
+    .guessed {
+      fill: #00ADB5 !important; 
+  }
