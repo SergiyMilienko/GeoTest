@@ -1,6 +1,6 @@
 /* Define how the body of main page look like */
 body {
-    background-color: antiquewhite;
+    background-color: #393E46;
     /* Ensure the image is resized to cover the whole available background */
     background-size: cover;
     /* Ensure the image is displayed only once */
@@ -22,16 +22,17 @@ h1 {
     padding: 0;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.250);
     background-color: transparent;
     border: none;
+    color: #EEEEEE;
     box-shadow: none;
 }
 
 /* Adjust header appearance when using phones or tablets */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 50px;
+        font-size: 20px;
     }
     h2 {
         font-size: 10px;
@@ -52,19 +53,17 @@ h2 {
 
 /* Coloring "Geo" */
 .highlight-white { 
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #EEEEEE;
 }
 
 /* Coloring "Fact" */
 .highlight-yellow { 
-    color: gold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #00ADB5;
 }
 
 /* "Play" button */
 .start {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #EEEEEE;
     margin-top: 40px;
     color: rgb(0, 0, 0);
     font-size: 30px;
@@ -101,31 +100,30 @@ h2 {
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;
-    background-color: rgb(29, 28, 28);
+    background-color: #222831;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #EEEEEE;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.250);
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #393E46;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+    color: #393E46;
   }
   
   /* Centered section inside the top navigation */
@@ -198,14 +196,14 @@ form {
 }
 
 .mapdiv path {
-    fill: #ffffffce;
+    fill:#EEEEEE;
     stroke: #000000;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
 
 .mapdiv path:hover {
-    fill: #fff200;
+    fill: #00ADB5;
 }
 
 .mapdiv .zoom-controls {
@@ -215,6 +213,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:rgb(102, 72, 21);
 }
 
 .mapdiv .zoom-controls button {
@@ -222,6 +221,7 @@ form {
     padding: 5px 10px;
     margin-bottom: 5px;
     cursor: pointer;
+    color:rgb(102, 72, 21);
 }
 
 .container {
@@ -234,8 +234,8 @@ form {
   position: absolute; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #ffea00; /* Grey text */
+  background: #222831; /* Black background with 0.5 opacity */
+  color: #EEEEEE; /* Grey text */
  /* Full width */
   padding: 20px; /* Some padding */
   border-radius: 8px;
@@ -244,7 +244,27 @@ form {
   align-items: center;
   justify-content: center;
   text-align: center;}
+  
 
   .highlight_red {
     text-decoration: underline;
+    color: #00ADB5;
   }
+
+  .Quiz2 {
+    position: fixed; /* Position the background text */
+    top: 30%;
+    left: 0%;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: #222831; /* Black background with 0.5 opacity */
+    color: #EEEEEE; /* Grey text */
+   /* Full width */
+    padding: 20px; /* Some padding */
+    border-radius: 20px;
+    width: 10%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;}
+    

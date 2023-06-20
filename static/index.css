@@ -1,8 +1,9 @@
 /* Define how the body of main page look like */
 body {
-    background-image: url("https://images.pexels.com/photos/9494908/pexels-photo-9494908.jpeg?cs=srgb&dl=pexels-nothing-ahead-9494908.jpg&fm=jpg");
-    /* Ensure the image is resized to cover the whole available background */
+    background-color: #393E46;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/787/612/original/3d-realistic-earth-australia-4k-png.png");
     background-size: cover;
+    /* Ensure the image is resized to cover the whole available background */
     /* Ensure the image is displayed only once */
     background-repeat: no-repeat;
     margin: 0;
@@ -16,20 +17,41 @@ body {
     flex-direction: column;
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background-size:contain;
+        background-position:center;
+    }
+}
+
+/* Adjust the background image size for mobile phones */
+@media screen and (max-width: 480px) {
+    body {
+        background-size:cover;
+        background-position:bottom;
+    }
+}
+
 /* Define how the header of main page look like */
 h1 {
-    margin: 70px 0 0;
-    margin-left: 20px;
+    margin: 65px 0 0;
     padding: 0;
     font-size: 150px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* Adjust header appearance when using phones or tablets */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 50px;
+        margin-top: 180px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
     h2 {
         font-size: 10px;
@@ -49,79 +71,71 @@ h2 {
 
 /* Coloring "Geo" */
 .highlight-white { 
-    color: rgb(255, 255, 255);
+    color: #EEEEEE;
 }
 
 /* Coloring "Fact" */
 .highlight-yellow { 
-    color: gold;
+    color: #00ADB5;
 }
 
 /* "Play" button */
 .start {
     background-color: rgba(255, 255, 255, 0.9);
-    margin-top: 40px;
-    color: rgb(0, 0, 0);
+    color: #222831;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 60px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 12px 24px;
+    padding: 12px 35px;
     border: none;
     border-radius: 8px;
     /* "Changing cursor to a pointer when hovered */
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     /* Animation (changing color with scaling and then easing */
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
 }
 
 /* Style of the button when it is hovered */
 .start:hover {
-    background-color: gold;
+    background-color: #00ADB5;
     color: #fff;
     /* Scale when hovered */
-    transform: scale(1.05);
-}
-
-/* Style of the button when it is clicked */
-.start:focus {
-    /* Remove default outline */
-    outline: none;
-    box-shadow: 0 0 0 2px gold, 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Animation of the button when it is clicked */
-.start:active {
-    transform: translateY(1px);
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;
-    background-color: rgb(29, 28, 28);
+    background-color: #222831;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #EEEEEE;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #363b43;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #393E46;
   }
   
   /* Centered section inside the top navigation */
@@ -137,6 +151,21 @@ h2 {
   .topnav-right {
     float: right;
   }
+
+  @media screen and (max-width: 768px) {
+    .start {
+        font-size: 30px;
+    }
+}
+
+/* Adjust the margin and alignment for mobile phones */
+@media screen and (max-width: 480px) {
+    .start {
+        font-size: 25px;
+    }
+}
+
+
   
 
   

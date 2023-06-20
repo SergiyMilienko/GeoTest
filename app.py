@@ -195,15 +195,19 @@ def logout():
 @app.route("/play", methods=["GET", "POST"])
 def play():
     country = get_random_country()
+    session["score"] = 0
     return render_template("mode1.html", country=country)
 
 @app.route("/process_country", methods=["POST"])
 def process_country():
     guessed_country = request.form.get("country")
     random_country = session.get("random_country")
-    result = "Wrong answer" if guessed_country != random_country else "Right answer"
+    result = "❌" if guessed_country != random_country else "✅"
+    if guessed_country == random_country:
+        session["score"] += 1
     country = get_random_country()
     session["random_country"] = country  # Store the new random country in the session
-    return render_template("mode1.html", country=country, random_country=random_country, result=result)
+    score = session.get("score")
+    return render_template("mode1.html", country=country, random_country=random_country, result=result, score=score)
 
 

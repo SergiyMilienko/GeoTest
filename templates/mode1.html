@@ -85,7 +85,7 @@
 <body>
     <!-- Navbar -->
     <nav class="topnav">
-        <a href="/main"><span class="highlight-white">Geo</span><span class="highlight-yellow">Fact</span></a>
+        <a href="/"><span class="highlight-white">Geo</span><span class="highlight-yellow">Test</span></a>
         <div class="topnav-centered">
             {% if session.user_id %}
                 <a href="/user">{{ session.username }}</a>
@@ -100,7 +100,12 @@
         <h1>Find <span id="country" class = "highlight_red">{{ country }}</span> on the map!</h1>
     </div>
     </div>
-    <div>{{ result }} </div>
+    <div class="container">
+        <div class="Quiz2">
+            <h1>Score: {{ score }}</h1>
+            <h1>{{ result }} </h1>
+        </div>
+    </div>
     <div class="mapdiv">
         <div class="zoom-controls">
             <button class="zoom-in">+</button>
