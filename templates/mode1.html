@@ -93,20 +93,29 @@
         </div>
     </nav>
     <div class="container">
-    <div class="Quiz">
-        {% if count is not defined or count <= max_score %}
-        <h1>Find <span id="country" class = "highlight_red">{{ country }}</span> on the map!</h1>
-        {% elif count == max_score or count >= max_score %}
-        <h1>Your score: {{ score }}/{{ max_score }}</h1>
-        {% endif %}
+        <div class="Quiz">
+            {% if count is not defined or count <= max_score %}
+            <h1>Find <span id="country" class="highlight_red">{{ country }}</span> on the map!</h1>
+            {% elif count == max_score or count >= max_score %}
+            <h1>Your score: {{ score }}/{{ max_score }}</h1>
+            {% endif %}
+        </div>
     </div>
-    </div>
-    <div class="container">
-        <div class="Quiz2">
+    {% if count is not defined or count <= max_score %}
+            {% elif count == max_score or count >= max_score %}
+            <a href="/main" class="start">Play Again</a>
+            {% endif %}
+    
+            {% if count is not defined or count <= max_score %}
+            <div class="container">
+                <div class="Quiz2">
             <h1>Score: {{ score }}</h1>
             <h1>{{ result }} </h1>
         </div>
     </div>
+            {% elif count == max_score or count >= max_score %}
+            {% endif %}
+        
     <div class="mapdiv">
         <div class="zoom-controls">
             <button class="zoom-in">+</button>

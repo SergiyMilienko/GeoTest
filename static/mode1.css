@@ -63,14 +63,19 @@ h2 {
 
 /* "Play" button */
 .start {
+    position: absolute;
+    z-index: 9999;
     background-color: #EEEEEE;
-    margin-top: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 12px 24px;
+    padding: 14px 100px;
     border: none;
     border-radius: 8px;
+    text-decoration: none;
     /* "Changing cursor to a pointer when hovered */
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -83,20 +88,8 @@ h2 {
     background-color: #00ADB5;
     color: #fff;
     /* Scale when hovered */
-    transform: scale(1.05);
 }
 
-/* Style of the button when it is clicked */
-.start:focus {
-    /* Remove default outline */
-    outline: none;
-    box-shadow: 0 0 0 2px gold, 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Animation of the button when it is clicked */
-.start:active {
-    transform: translateY(1px);
-}
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;

@@ -1,7 +1,7 @@
 /* Define how the body of main page look like */
 body {
     background-color: #393E46;
-     background-image: url("https://static.vecteezy.com/system/resources/previews/011/787/612/original/3d-realistic-earth-australia-4k-png.png");
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/787/612/original/3d-realistic-earth-australia-4k-png.png");
     background-size: cover;
     /* Ensure the image is displayed only once */
     background-repeat: no-repeat;
@@ -34,6 +34,10 @@ h1 {
     }
     h2 {
         font-size: 10px;
+    }
+    .start {
+      font-size: 15px !important;
+      margin-top: -20px !important;
     }
 }
 
