@@ -43,49 +43,49 @@ less_popular_countries = ["Afghanistan", "Albania", "Algeria", "Azerbaijan", "Ba
                           "Montenegro", "Morocco", "Namibia", "Nepal", "Nicaragua", "Nigeria", 
                           "North Macedonia", "Panama", "Papua New Guinea", "Paraguay", "Peru", 
                           "Philippines", "Qatar", "Serbia", "Zambia", "Zimbabwe", "United Arab Emirates", 
-                          "Uzbekistan", "Yemen", "Singapore", "Somalia", "Sri Lanka", "Taiwan", 
+                          "Uzbekistan", "Yemen", "Somalia", "Sri Lanka", "Taiwan", 
                           "Tajikistan", "Tanzania", "Thailand", "Tunisia", "Turkmenistan", "Uganda", "Uruguay"]
 
 
 least_popular_countries = ["Angola", "Antigua and Barbuda", "Bahamas", "Bahrain", "Barbados", "Benin", 
-                           "Bhutan", "Brunei", "Burkina Faso", "Burundi", "Cabo Verde", "Comoros", "Costa Rica", 
+                           "Bhutan", "Brunei", "Burkina Faso", "Burundi", "Cape Verde", "Comoros", "Costa Rica", 
                            "Cyprus", "Djibouti", "Dominica", "Dominican Republic", "Equatorial Guinea", "Eritrea", 
                            "Eswatini", "Fiji", "Gabon", "Gambia", "Grenada", "Guinea", "Guinea-Bissau", "Guyana", 
-                           "Haiti", "Kiribati", "Lesotho", "Malawi", "Maldives", "Mali", "Malta", 
+                           "Haiti", "Lesotho", "Malawi", "Mali", 
                            "Marshall Islands", "Mauritania", "Mauritius", "Micronesia", "Mozambique", "Myanmar", 
                            "Nauru", "Niger", "Oman", "Palau", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
-                           "Saint Vincent and the Grenadines", "Samoa", "Sao Tome and Principe", 
-                           "Senegal", "Seychelles", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", 
+                           "Saint Vincent and the Grenadines", "Samoa", "São Tomé and Principe", 
+                           "Senegal", "Seychelles", "Timor-Leste", "Togo", "Trinidad and Tobago", 
                            "Suriname", "Sierra Leone", "Solomon Islands", "South Sudan", "Sudan", "Tuvalu", "Vanuatu"]
 
 all_countries = ["Afghanistan", "Albania", "Algeria", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", 
     "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", 
     "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", 
-    "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", 
+    "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cape Verde", "Cambodia", "Cameroon", "Canada", 
     "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", 
     "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", 
     "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", 
     "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", 
     "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", 
     "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", 
-    "Kenya", "Kiribati", "North Korea", "South Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", 
+    "Kenya", "North Korea", "South Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", 
     "Lebanon", "Lesotho", "Liberia", "Libya", "Lithuania", "Luxembourg", "Madagascar", 
-    "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", 
+    "Malawi", "Malaysia", "Mali", "Marshall Islands", "Mauritania", "Mauritius", 
     "Mexico", "Micronesia", "Moldova", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", 
     "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", 
     "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", 
     "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
-    "Saint Vincent and the Grenadines", "Samoa", "Sao Tome and Principe", "Saudi Arabia", 
-    "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", 
+    "Saint Vincent and the Grenadines", "Samoa", "São Tomé and Principe", "Saudi Arabia", 
+    "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Slovakia", "Slovenia", "Solomon Islands", 
     "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", 
-    "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", 
+    "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Trinidad and Tobago", 
     "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", 
     "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", 
     "Zambia", "Zimbabwe"]
 
 africa = [
     "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi",
-    "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros",
+    "Cape Verde", "Cameroon", "Central African Republic", "Chad", "Comoros",
     "Congo", "Côte d'Ivoire", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea",
     "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau",
     "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania",
@@ -99,9 +99,9 @@ asia = [
     "Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan",
     "Brunei", "Cambodia", "China", "Cyprus", "Georgia", "India", "Indonesia",
     "Iran", "Iraq", "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan",
-    "Laos", "Lebanon", "Malaysia", "Maldives", "Mongolia", "Myanmar", "Nepal",
+    "Laos", "Lebanon", "Malaysia", "Mongolia", "Myanmar", "Nepal",
     "North Korea", "Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia",
-    "Saudi Arabia", "Singapore", "South Korea", "Sri Lanka", "Syria", "Taiwan",
+    "Saudi Arabia", "South Korea", "Sri Lanka", "Syria", "Taiwan",
     "Tajikistan", "Thailand", "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates",
     "Uzbekistan", "Vietnam", "Yemen"
 ]
@@ -110,7 +110,7 @@ europe = [
     "Albania", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina",
     "Bulgaria", "Croatia", "Czech Republic", "Denmark", "Estonia", "Finland", "France",
     "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia",
-    "Lithuania", "Luxembourg", "Malta", "Moldova", "Montenegro",
+    "Lithuania", "Luxembourg", "Moldova", "Montenegro",
     "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal", "Romania",
     "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Ukraine",
     "United Kingdom"
@@ -124,8 +124,8 @@ north_america = [
 ]
 
 oceania = [
-    "Australia", "Fiji", "Kiribati", "Marshall Islands", "Micronesia", "Nauru",
-    "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", "Tonga",
+    "Australia", "Fiji", "Marshall Islands", "Micronesia", "Nauru",
+    "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands",
     "Tuvalu", "Vanuatu"
 ]
 
