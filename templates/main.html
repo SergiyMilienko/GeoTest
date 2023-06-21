@@ -25,19 +25,16 @@
     </nav>
 
     <form action="/play" method="post">
-        <label for="cars">Choose a Mode:</label>
-        <select name="mode" id="mode">
-            <option value="mode1">Find Countries on the Map</option>
-            <option value="mode2">Guess the Country by Map</option>
-            <option value="mode3">Guess the Country by Fact</option>
-          </select>
-          <label for="cars">Choose a Difficulty:</label>
-          <select name="difficulty" id="difficulty">
-            <option value="ease">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        <button class="start" type="submit">Play</button>
+        <button class="start" type="submit" name="difficulty" value="easy">Easy</button>
+        <button class="start" type="submit" name="difficulty" value="medium">Medium</button>
+        <button class="start" type="submit " name="difficulty" value="difficult">Difficult</button>
+        <button class="start" type="submit " name="difficulty" value="all">All countries</button>
+        <button class="start" type="submit " name="difficulty" value="europe">Europe</button>
+        <button class="start" type="submit " name="difficulty" value="asia">Asia</button>
+        <button class="start" type="submit " name="difficulty" value="africa">Africa</button>
+        <button class="start" type="submit " name="difficulty" value="north_america">North America</button>
+        <button class="start" type="submit " name="difficulty" value="south_america">South America</button>
+        <button class="start" type="submit " name="difficulty" value="oceania">Oceania</button>
     </form>
 </body>
 </html>
