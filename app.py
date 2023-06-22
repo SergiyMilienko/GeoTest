@@ -1,73 +1,17 @@
 import os
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
-from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import login_required, apology
+from database import create_database, create_table
+from random_country import get_random_country
 import sqlite3
-import random
-from countries_lists import popular_countries, less_popular_countries, least_popular_countries, all_countries, africa, asia, europe, north_america, oceania, south_america
 
-# Create database or create it if it does not exist
-conn = sqlite3.connect('geofact.db')
-
-# Create a cursor object
-cursor = conn.cursor()
-
-# Create a table
-cursor.execute('''CREATE TABLE IF NOT EXISTS users (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    username TEXT NOT NULL,
-                    hash TEXT NOT NULL
-                )''')
+create_database()
+create_table()
 
 # Configure application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
-
-def get_random_country():
-    difficulty = session.get("difficulty")
-    guessed_countries = session.get("guessed_countries", [])
-    available_countries = [country for country in all_countries if country not in guessed_countries]
-    
-    if difficulty == "easy":
-        available_countries = popular_countries
-        session["max_score"] = len(popular_countries)
-    elif difficulty == "medium":
-        available_countries = less_popular_countries
-        session["max_score"] = len(less_popular_countries)
-    elif difficulty == "hard":
-        available_countries = least_popular_countries
-        session["max_score"] = len(least_popular_countries)
-    elif difficulty == "all":
-        available_countries = all_countries
-        session["max_score"] = len(all_countries)
-    elif difficulty == "europe":
-        available_countries = europe
-        session["max_score"] = len(europe)
-    elif difficulty == "asia":
-        available_countries = asia
-        session["max_score"] = len(asia)
-    elif difficulty == "oceania":
-        available_countries = oceania
-        session["max_score"] = len(oceania)
-    elif difficulty == "north_america":
-        available_countries = north_america
-        session["max_score"] = len(north_america)
-    elif difficulty == "south_america":
-        available_countries = south_america
-        session["max_score"] = len(south_america)
-    elif difficulty == "africa":
-        available_countries = africa
-        session["max_score"] = len(africa)
-
-
-    available_countries = [country for country in available_countries if country not in guessed_countries]
-
-    if available_countries:
-        return random.choice(available_countries)
-    else:
-        return None
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
@@ -190,14 +134,6 @@ def register():
 @app.route("/main")
 def main():
         return render_template("main.html")
-
-@app.route("/resetpassword")
-def reset_password():
-        return render_template("reset.html")
-
-@app.route("/settings")
-def settings():
-        return render_template("reset.html")
 
 @app.route("/logout")
 def logout():
