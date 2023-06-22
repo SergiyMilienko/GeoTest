@@ -93,7 +93,7 @@ h2 {
 /* Add a black background color to the top navigation */
 .topnav {
     position: relative;
-    background-color: #222831;
+    background-color: #222831c3;
     overflow: hidden;
   }
   
@@ -224,10 +224,11 @@ form {
 }
 
 .Quiz {
+  z-index: 9999;
   position: absolute; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
   background: rgb(0, 0, 0); /* Fallback color */
-  background: #222831; /* Black background with 0.5 opacity */
+  background: #222831c3; /* Black background with 0.5 opacity */
   color: #EEEEEE; /* Grey text */
  /* Full width */
   padding: 20px; /* Some padding */
@@ -245,11 +246,12 @@ form {
   }
 
   .Quiz2 {
+    z-index: 9999;
     position: fixed; /* Position the background text */
     top: 30%;
     left: 0%;
     background: rgb(0, 0, 0); /* Fallback color */
-    background: #222831; /* Black background with 0.5 opacity */
+    background: #222831c3; /* Black background with 0.5 opacity */
     color: #EEEEEE; /* Grey text */
    /* Full width */
     padding: 20px; /* Some padding */
