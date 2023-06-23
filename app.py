@@ -34,7 +34,7 @@ def index():
 def login():
     """Log user in"""
     # Connect to database 
-    with sqlite3.connect('geofact.db') as db:
+    with sqlite3.connect('geotest.db') as db:
         # User reached route via POST (as by submitting a form via POST)
         if request.method == "POST":
 
@@ -75,7 +75,7 @@ def login():
 def register():
     """Register user"""
     # Connect to database 
-    with sqlite3.connect('geofact.db') as db:
+    with sqlite3.connect('geotest.db') as db:
         # User reached route via POST (as by submitting a form via POST)
         if request.method == "POST":
 
@@ -131,9 +131,9 @@ def register():
         else:
             return render_template("register.html")
 
-@app.route("/main")
-def main():
-        return render_template("main.html")
+@app.route("/mode")
+def mode():
+        return render_template("mode.html")
 
 @app.route("/logout")
 def logout():
@@ -155,7 +155,7 @@ def play():
     session["count"] = 0
     session["guessed_countries"] = []
     session["random_country"] = country
-    return render_template("mode1.html", country=country)
+    return render_template("play.html", country=country)
 
 @app.route("/process_country", methods=["POST"])
 def process_country():
@@ -174,7 +174,7 @@ def process_country():
     count = session.get("count")
     max_score = session.get("max_score")
     guessed_countries = session.get("guessed_countries")
-    return render_template("mode1.html", country=country, random_country=random_country, result=result, score=score, guessed_countries=guessed_countries, max_score=max_score, count=count)
+    return render_template("play.html", country=country, random_country=random_country, result=result, score=score, guessed_countries=guessed_countries, max_score=max_score, count=count)
 
 if __name__ == '__main__':
     app.run()

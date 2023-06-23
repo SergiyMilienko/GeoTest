@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <!--Device responsiveness-->
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <title>GeoFact</title>
+    <title>GeoTest</title>
     <!--CSS stylesheet-->
-    <link rel="stylesheet" href="static\mode1.css">
+    <link rel="stylesheet" href="static\play.css">
     <!--Add favicon-->
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2784/2784487.png">    
-    <script src="static\mode1.js"></script>
+    <script src="static\play.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -17,7 +17,7 @@
         <a href="/"><span class="highlight-white">Geo</span><span class="highlight-yellow">Test</span></a>
         <div class="topnav-centered">
             {% if session.user_id %}
-                <a href="/user">{{ session.username }}</a>
+                <a href="/play">{{ session.username }}</a>
             {% endif %}
         </div>
         <div class="topnav-right">
@@ -35,7 +35,7 @@
     </div>
     {% if count is not defined or count <= max_score - 1%}
             {% elif count == max_score or count >= max_score %}
-            <a href="/main" class="start">Play Again</a>
+            <a href="/mode" class="start">Play Again</a>
             {% endif %}
     
             {% if count is not defined or count <= max_score - 1  %}
