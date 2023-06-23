@@ -37,7 +37,6 @@ def get_random_country():
         available_countries = africa
         session["max_score"] = len(africa)
 
-
     available_countries = [country for country in available_countries if country not in guessed_countries]
 
     if available_countries:

@@ -1,23 +1,14 @@
-/* Define how the body of main page look like */
 body {
     background-color: #393E46;
-    /* Ensure the image is resized to cover the whole available background */
     background-size: cover;
-    /* Ensure the image is displayed only once */
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    /* Ensure the body will cover all the height of viewport */
     height: 100vh;
-    /* Enable the use of flexbox properties*/
     display: flex;
-    /* Aligning elements horizontally*/
-    /* Aligning elements vertically*/
     flex-direction: column;
 }
 
-
-/* Define how the header of main page look like */
 h1 {
     padding: 0;
     font-size: 30px;
@@ -29,7 +20,6 @@ h1 {
     box-shadow: none;
 }
 
-/* Adjust header appearance when using phones or tablets */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 20px;
@@ -51,17 +41,14 @@ h2 {
     padding: 0px 8px;
 }
 
-/* Coloring "Geo" */
 .highlight-white { 
     color: #EEEEEE;
 }
 
-/* Coloring "Fact" */
 .highlight-yellow { 
     color: #00ADB5;
 }
 
-/* "Play" button */
 .start {
     position: absolute;
     z-index: 9999;
@@ -76,28 +63,22 @@ h2 {
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    /* "Changing cursor to a pointer when hovered */
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Animation (changing color with scaling and then easing */
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
 }
 
-/* Style of the button when it is hovered */
 .start:hover {
     background-color: #00ADB5;
     color: #fff;
-    /* Scale when hovered */
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
     position: relative;
     background-color: #222831c3;
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     color: #EEEEEE;
@@ -109,17 +90,14 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.250);
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #393E46;
   }
   
-  /* Add a color to the active/current link */
   .topnav a.active {
     color: #393E46;
   }
   
-  /* Centered section inside the top navigation */
   .topnav-centered a {
     float: none;
     position: absolute;
@@ -128,26 +106,22 @@ h2 {
     transform: translate(-50%, -50%);
   }
   
-  /* Right-aligned section inside the top navigation */
   .topnav-right {
     float: right;
   }
 
-  /* Styles for tablets */
 @media screen and (max-width: 768px) {
     .topnav a {
       font-size: 14px;
     }
   }
   
-  /* Styles for mobile phones */
   @media screen and (max-width: 480px) {
     .topnav a {
       font-size: 12px;
     }
   }
 
-  /* Styles for form */
 form {
     display: flex;
     flex-direction: column;
@@ -225,13 +199,12 @@ form {
 
 .Quiz {
   z-index: 9999;
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: #222831c3; /* Black background with 0.5 opacity */
-  color: #EEEEEE; /* Grey text */
- /* Full width */
-  padding: 20px; /* Some padding */
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0); 
+  background: #222831c3; 
+  color: #EEEEEE; 
+  padding: 20px;
   border-radius: 8px;
   width: 95%;
   display: flex;
@@ -247,14 +220,13 @@ form {
 
   .Quiz2 {
     z-index: 9999;
-    position: fixed; /* Position the background text */
+    position: fixed; 
     top: 30%;
     left: 0%;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: #222831c3; /* Black background with 0.5 opacity */
-    color: #EEEEEE; /* Grey text */
-   /* Full width */
-    padding: 20px; /* Some padding */
+    background: rgb(0, 0, 0); 
+    background: #222831c3; 
+    color: #EEEEEE; 
+    padding: 20px; 
     border-radius: 20px;
     width: 10%;
     height: 30%;

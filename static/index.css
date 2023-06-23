@@ -1,19 +1,12 @@
-/* Define how the body of main page look like */
 body {
     background-color: #393E46;
     background-image: url("https://static.vecteezy.com/system/resources/previews/011/787/612/original/3d-realistic-earth-australia-4k-png.png");
     background-size: cover;
-    /* Ensure the image is resized to cover the whole available background */
-    /* Ensure the image is displayed only once */
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    /* Ensure the body will cover all the height of viewport */
     height: 100vh;
-    /* Enable the use of flexbox properties*/
     display: flex;
-    /* Aligning elements horizontally*/
-    /* Aligning elements vertically*/
     flex-direction: column;
 }
 
@@ -24,7 +17,6 @@ body {
     }
 }
 
-/* Adjust the background image size for mobile phones */
 @media screen and (max-width: 480px) {
     body {
         background-size:cover;
@@ -32,7 +24,6 @@ body {
     }
 }
 
-/* Define how the header of main page look like */
 h1 {
     margin: 65px 0 0;
     padding: 0;
@@ -46,7 +37,6 @@ h1 {
     flex-direction: column;
 }
 
-/* Adjust header appearance when using phones or tablets */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 50px;
@@ -69,17 +59,14 @@ h2 {
     padding: 0px 8px;
 }
 
-/* Coloring "Geo" */
 .highlight-white { 
     color: #EEEEEE;
 }
 
-/* Coloring "Fact" */
 .highlight-yellow { 
     color: #00ADB5;
 }
 
-/* "Play" button */
 .start {
     background-color: rgba(255, 255, 255, 0.9);
     color: #222831;
@@ -95,28 +82,22 @@ h2 {
     padding: 12px 35px;
     border: none;
     border-radius: 8px;
-    /* "Changing cursor to a pointer when hovered */
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Animation (changing color with scaling and then easing */
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-out;
 }
 
-/* Style of the button when it is hovered */
 .start:hover {
     background-color: #00ADB5;
     color: #fff;
-    /* Scale when hovered */
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
     position: relative;
     background-color: #222831;
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     color: #EEEEEE;
@@ -128,17 +109,14 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
-  /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #363b43;
   }
   
-  /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #393E46;
   }
   
-  /* Centered section inside the top navigation */
   .topnav-centered a {
     float: none;
     position: absolute;
@@ -147,7 +125,6 @@ h2 {
     transform: translate(-50%, -50%);
   }
   
-  /* Right-aligned section inside the top navigation */
   .topnav-right {
     float: right;
   }
@@ -158,7 +135,6 @@ h2 {
     }
 }
 
-/* Adjust the margin and alignment for mobile phones */
 @media screen and (max-width: 480px) {
     .start {
         font-size: 25px;

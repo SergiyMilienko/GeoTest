@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--Device responsiveness-->
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>GeoTest</title>
-    <!--CSS stylesheet-->
     <link rel="stylesheet" href="static\login.css">
-    <!--Add favicon-->
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2784/2784487.png">    
 </head>
 <body>
     <button id="backButton" onclick="goBack()"></button>
-    <!--Forms to fill username and password-->
     <form action="/login" method="post">
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto input" id="username" name="username" placeholder="Username" type="text">
@@ -22,15 +18,11 @@
         </div>
             <button class="start" type="submit">Login</button>
     </form>
-    
-    <!--Display error message-->
     {% if apology_message %}
     <div class="error-message">
         {{ apology_message }}
     </div>
     {% endif %}
-
-    <!--Register and forgot password-->
     <p class="register-now">Don't have an account? <a href="/register" class="hyperlink">Register now</a></p>
     <script src="static\login&register.js"></script>
 </body>
