@@ -1,26 +1,61 @@
-# GeoTest
-## Introduction:
-GeoTest is a Flask-based web application that allows users to play a game where they have to locate countries on a map. It incorporates features such as user registration, login/logout functionality, game scoring, and random country generation. The application is built using Python, SQLite, HTML, CSS, and JavaScript.
+# **GeoTest**
+Hello! My name is Serhii Milienko and this is my final project for CS50 course. 
+## **Introduction**:
+This is my Flask-based web application that allows users to test their knowledge of world geography through an interactive game. Users can register an account, log in, and play the game where they have to locate countries on a map. The application is built using Python, SQLite, HTML, CSS, and JavaScript.
 
-## Routes
-GeoTest defines the following routes:
+## **Project Structure**
+- **app.py:** The main Python file containing the Flask application and the routes for handling different endpoints.
+- **random_country.py:** A module containing a function to retrieve a random country for the game.
+- **database.py:** A module containing functions to create the SQLite database and table.
+- **countries_lists.py:** A module containing lists of countries based on their continent or recognizability 
+- **geotest.db:** SQlite database for storing usernames and hashed passwords 
+- **index.html:** The HTML template for the index page, which serves as the landing page of the application.
+- **map.html:** The HTML template for the page that displays the map and handles country selection.
+- **mode.html:** The HTML template for the mode selection page, where users can choose the difficulty level of the game.
+- **play.html:** The HTML template for the game page, which displays the country to be identified and the user's score.
+- **login.html:** The HTML template for the login page, where users can enter their credentials to log in.
+- **register.html:** The HTML template for the registration page, where users can create a new account.
+- **static/index.css:** The CSS file for styling the index page.
+- **static/login.css:** The CSS file for styling the login page.
+- **static/register.css:** The CSS file for styling the register page.
+- **static/mode.css:** The CSS file for styling the mode selection page.
+- **static/play.css:** The CSS file for styling the game page.
+- **static/play.js:** The JavaScript file for handling interactions on the game page.
+- **static/login&register.js:** The JavaScript file for handling interactions on the login and register pages.
 
-1. GET "/": Renders the home page with a link to the game.
-2. GET/POST "/login": Renders the login page and handles user login.
-3. GET/POST "/register": Renders the registration page and handles user registration.
-4. GET "/mode": Renders the game mode selection page.
-5. GET "/logout": Logs out the user and redirects to the login page.
-6. GET/POST "/play": Renders the game page and handles game difficulty selection.
-7. POST "/process_country": Handles the form submission from the game page and processes the guessed country.
 
-## Static Files
-The static files used in GeoTest, such as CSS and JavaScript files, are stored in the static directory. The static files include the following:
+### **app.py**
+### **random_country.py**
+### **database.py:**
+### **countries_lists.py:**
+### **geotest.db:**
+### **index.html:**
+### **map.html:**
+### **mode.html:**
+### **play.html:**
+### **login.html:**
+### **register.html:**
+### **static/mode.css:**
+### **static/play.css:**
+### **static/play.js:**
+### **static/login&register.js:**
 
-## Database
-GeoTest uses SQLite for its database management. The database is created using the create_database() function from the database.py module, and the necessary table is created using the create_table() function from the same module. The SQLite database file is named geotest.db and is located in the project directory.
+## **Routes**
 
-The database schema consists of a single table named "users" with the following columns:
+The GeoTest application includes the following routes:
+- /: The index route, which serves as the landing page of the application.
+- /login: The route for user login. Accepts both GET and POST requests.
+- /register: The route for user registration. Accepts both GET and POST requests.
+- /mode: The route for selecting the difficulty level of the game.
+- /logout: The route for user logout.
+- /play: The route for playing the game. Accepts both GET and POST requests.
+- /process_country: The route for processing the user's guess in the game. Accepts POST requests.
 
-id: An auto-incrementing integer primary key.
-username: A string representing the user's username.
-hash: A string representing the hashed password.
+## **Libraries**
+
+- **os**: 
+- **Flask**: 
+- **Flask-Session**: 
+- **werkzeug.security**: 
+- **sqlite3**: 
+- **random**: 
