@@ -1,4 +1,6 @@
 # **GeoTest**
+Video demo: https://www.youtube.com/watch?v=3qjkzvRpNtQ
+
 Hello! My name is Serhii Milienko and this is my final project for CS50 course. 
 ## **Introduction**:
 This is my Flask-based web application that allows users to test their knowledge of world geography through an interactive game. Users can register an account, log in, and play the game where they have to locate countries on a map. The application is built using Python, SQLite, HTML, CSS, and JavaScript.
@@ -256,3 +258,4 @@ The first line declares a variable `errorField` and assigns it the value of the 
 4. SVG map zoom in and zoom out logic: https://itnext.io/javascript-zoom-like-in-maps-for-svg-html-89c0df016d8d, 
 5. Youtube tutorial by CSS-Tricks: https://www.youtube.com/watch?v=7Pyb7UpxKMw
 6. ChatGPT to analize big sizes of data and to help understand some complicated concepts: https://chat.openai.com/
+7. PythonAnywhere to host a webstite: https://www.pythonanywhere.com/
