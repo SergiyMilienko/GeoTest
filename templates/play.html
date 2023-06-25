@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="topnav">
-        <a href="/"><span class="highlight-white">Geo</span><span class="highlight-yellow">Test</span></a>
+        <a href="/"><span class="highlight-white">Geo</span><span class="highlight-turquoise">Test</span></a>
         <div class="topnav-centered">
             {% if session.user_id %}
                 <a href="/play">{{ session.username }}</a>
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="Quiz">
             {% if count is not defined or count <= max_score - 1 %}
-            <h1>Find <span id="country" class="highlight_red">{{ country }}</span> on the map!</h1>
+            <h1>Find <span id="country" class="highlight_underline">{{ country }}</span> on the map!</h1>
             {% elif count == max_score or count >= max_score %}
             <h1>Your score: {{ score }}/{{ max_score }}</h1>
             {% endif %}
